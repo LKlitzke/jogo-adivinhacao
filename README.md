@@ -1,2 +1,3 @@
-# jogo-adivinhacao
-Algoritmo de um jogo de adivinhação em JavaScript
+# Jogo de Adivinhação em Javascript
+
+Algoritmo simples como projeto prático da disciplina de Desenvolvimento de Aplicações Web I.
