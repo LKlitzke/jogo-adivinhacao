@@ -34,13 +34,18 @@ const arrayCores = [
     "Tomato", "Turquoise", "Violet", "Wheat", "White", "WhiteSmoke", "Yellow", "YellowGreen",
 ];
 
-// Gerador de array com cores aleatórias e input do nome do usuário
+// Gerador de array com cores aleatórias sem repetição
 const arrayRandom = new Array(10);
 for(var i=0; i<arrayRandom.length; i++){
-    arrayRandom[i] = arrayCores[Math.floor(Math.random() * arrayCores.length)];
+    do{
+        var aux = arrayCores[Math.floor(Math.random() * arrayCores.length)];
+    }while(arrayRandom.includes(aux));
+    arrayRandom[i] = aux;
     console.log(i+1, arrayRandom[i]); // Para verificações e testes
 }
 arrayRandom.sort();
+
+// Início da apresentação do jogo
 alert("Bem-vindo ao Jogo da Adivinhação em Javascript!\n\nClique em OK para começar!");
 do {
     var nome = prompt("Digite o seu nome:");
